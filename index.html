@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101827" />
+    <meta name="description" content="A quick, colorful tic-tac-toe game for one or two players." />
+    <title>Tic Tac Toe · Pocket Arcade</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span> POCKET ARCADE</div>
+        <span class="edition">NO. 01 / CLASSICS</span>
+      </header>
+
+      <section class="game-card" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow">A LITTLE GAME, A LOT OF RIVALRY</p>
+          <h1 id="game-title">Tic<span>·</span>Tac<span>·</span>Toe</h1>
+          <p class="subtitle">Three in a row wins. You know the drill.</p>
+        </div>
+
+        <div class="mode-switch" role="group" aria-label="Game mode">
+          <button class="mode-button active" type="button" data-mode="computer" aria-pressed="true">VS COMPUTER</button>
+          <button class="mode-button" type="button" data-mode="friend" aria-pressed="false">TWO PLAYERS</button>
+        </div>
+
+        <div class="scoreboard" aria-label="Scoreboard">
+          <div class="score score-x"><span class="score-symbol">X</span><span class="score-label" id="player-x-label">YOU</span><strong id="score-x">0</strong></div>
+          <div class="score score-draw"><span class="score-symbol">—</span><span class="score-label">DRAWS</span><strong id="score-draw">0</strong></div>
+          <div class="score score-o"><span class="score-symbol">O</span><span class="score-label" id="player-o-label">COMPUTER</span><strong id="score-o">0</strong></div>
+        </div>
+
+        <div class="status-wrap"><p id="status" class="status" role="status" aria-live="polite">Your move, X.</p></div>
+
+        <div class="board" role="group" aria-label="Tic-tac-toe board">
+          <button class="cell" type="button" data-cell="0" aria-label="Top left, empty"></button>
+          <button class="cell" type="button" data-cell="1" aria-label="Top middle, empty"></button>
+          <button class="cell" type="button" data-cell="2" aria-label="Top right, empty"></button>
+          <button class="cell" type="button" data-cell="3" aria-label="Middle left, empty"></button>
+          <button class="cell" type="button" data-cell="4" aria-label="Center, empty"></button>
+          <button class="cell" type="button" data-cell="5" aria-label="Middle right, empty"></button>
+          <button class="cell" type="button" data-cell="6" aria-label="Bottom left, empty"></button>
+          <button class="cell" type="button" data-cell="7" aria-label="Bottom middle, empty"></button>
+          <button class="cell" type="button" data-cell="8" aria-label="Bottom right, empty"></button>
+        </div>
+
+        <div class="actions">
+          <button id="new-round" class="primary-button" type="button">NEW ROUND <span aria-hidden="true">↗</span></button>
+          <button id="reset-scores" class="text-button" type="button">Reset scores</button>
+        </div>
+      </section>
+
+      <footer>MADE FOR FIVE-MINUTE BREAKS <span aria-hidden="true">✳</span> HAVE FUN OUT THERE</footer>
+    </main>
+  </body>
+</html>
